@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: smart-attendance-backend
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: CORS_ORIGINS
+        value: https://your-app.vercel.app
+      - key: PYTHON_VERSION
+        value: "3.12"
+    # DATABASE_URL is intentionally omitted here — leave unset to use SQLite,
+    # or add it manually in the Render dashboard if you attach a Postgres add-on.

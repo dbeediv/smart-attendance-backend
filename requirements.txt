@@ -1,0 +1,18 @@
+fastapi==0.115.6
+starlette==0.41.3
+uvicorn[standard]==0.32.1
+sqlalchemy==2.0.36
+pydantic[email]==2.10.6
+python-multipart==0.0.20
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+apscheduler==3.11.0
+deepface==0.0.100
+tf-keras
+opencv-python==4.13.0.92
+pillow
+numpy
+httpx
+python-dotenv==1.0.1
+psycopg2-binary==2.9.10  # only needed if you switch DATABASE_URL to Postgres
